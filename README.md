@@ -44,4 +44,62 @@ products and services, including demos, user guides, technical support, and othe
 - **cypress/reports/**: This directory is where Cypress generates test reports.
 
 
+### Test Scenarios for Login Functionality:
+
+1. **Login with Valid Credentials:**
+   - Description: User enters valid username and password and clicks the login button.
+   - Actions:
+     1. Enters a valid username.
+     2. Enters a valid password.
+     3. Clicks the login button.
+   - Expected:
+     - User is redirected to the dashboard.
+
+2. **Login with Invalid Credentials:**
+   - Description: User enters invalid username and password and clicks the login button.
+   - Actions:
+     1. Enters an invalid username.
+     2. Enters an invalid password.
+     3. Clicks the login button.
+   - Expected:
+     - An error message indicating invalid credentials is displayed.
+
+3. **Login Without Entering Password:**
+   - Description: User enters only the username and clicks the login button.
+   - Actions:
+     1. Enters a valid username.
+     2. Leaves the password field empty.
+     3. Clicks the login button.
+   - Expected:
+     - An error message indicating password is required is displayed.
+
+4. **Login Without Entering Username:**
+   - Description: User enters only the password and clicks the login button.
+   - Actions:
+     1. Leaves the username field empty.
+     2. Enters a valid password.
+     3. Clicks the login button.
+   - Expected:
+     - An error message indicating username is required is displayed.
+
+5. **Login Without Completing Mandatory Fields:**
+   - Description: User attempts to login without completing any of the mandatory fields (username and password).
+   - Actions:
+     1. Leaves both mandatory fields empty.
+     2. Clicks the login button.
+   - Expected:
+     - Error messages for both fields indicating they are required are displayed.
+6. **Verify Successful Logout:**
+
+   - Description: After successfully logging in, the user logs out of the system and verifies redirection to the login page.
+   - Actions:
+     1. Fill in the valid username and password.
+     2. Submit the login form.
+     3. Verify redirection to the dashboard.
+     4. Click on the drop-down menu.
+     5. Click on the "Logout" option.
+   - Expected:
+     - After clicking "Logout", the user is redirected to the login page.
+
+
 
