@@ -26,6 +26,10 @@ products and services, including demos, user guides, technical support, and othe
 
 - [Website](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
 
+# Project Structure 
+
+![Structure](https://github.com/AdrianPricopie/CypressAutomation/blob/main/Screenshot%202024-03-24%20at%2019.40.12.png)
+
 
 
 
