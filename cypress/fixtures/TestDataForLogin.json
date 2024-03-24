@@ -1,0 +1,10 @@
+{
+  "name": "bob",
+  "gender": "Female",
+  "ProductName":["Blackberry","Nokia Edge"],
+  "ValidUsername":"Admin",
+  "ValidPassword":"admin123",
+  "InvalidUsername":"ADdsad",
+  "InvalidPassword":"Sdsad",
+  "SelectUser":["ESS","Admin"]
+}
