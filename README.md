@@ -1,0 +1,31 @@
+# Automated Testing Project for OrangeHRM Website :computer:
+Welcome to the documentation for the automated testing project designed for the OrangeHRM website. This project leverages Cypress and the POM framework to implement a robust suite of tests, ensuring the functionality and reliability.
+## Table of Contents
+
+1. [Introduction/Tools and version](#introduction-notebook)
+2. [Project Structure](#project-structure)
+3. [Features Under Testing](#feature-under-the-tests)
+    - [Login Functionality Testing](#feature-under-the-tests)
+    - [Search Functionality Testing](#search-functionality-testing)
+4. [Getting-Started](#getting-started--pushpin)
+6. [Usage](#usage)
+7. [Reports](#reports)
+8. [Conclusion](#conclusions)
+o
+# Introduction :notebook:
+ 
+This project aims to implement automated tests for the OrangeHRM opensource website using Cypress and POM(Page object oriented) framework. 
+The primary objectives include simulating user interactions and login in account ,add users,delete users,search users.
+
+OrangeHRM is a Human Resources Management (HRM) system that provides software solutions for efficiently managing HR departments in businesses and organizations.
+OrangeHRM offers various functionalities, including employee data management, recruitment and selection, employee training, performance management, leave and absence management, report generation, as well as other HR-related aspects.
+OrangeHRM is available as open-source software or as cloud-based and on-premise solutions, catering to the diverse needs of businesses of different sizes and industries. The OrangeHRM website provides more information about their 
+products and services, including demos, user guides, technical support, and other useful resources for clients and users.
+
+- [Documentation](https://www.orangehrm.com/assets/Files/Live-3-0User-Guide-For-Administrative-Users-v2.pdf)
+
+- [Website](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+
+
+
+
