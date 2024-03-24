@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "tests": "./node_modules/.bin/Cypress run",
-    "HeadTests":"npm run tests -- --headed",
-    "chromeTests":"npm run tests -- --browser chrome",
-    "recordDashBoardTests":"npm run tests -- --record --key 0f297607-8b81-48b5-9fe4-fe44948af486"
+    "HeadTests": "npm run tests -- --headed",
+    "chromeTests": "npm run tests -- --browser chrome",
+    "recordDashBoardTests": "npm run tests -- --record --key 0f297607-8b81-48b5-9fe4-fe44948af486"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.7.0"
+    "cypress": "^13.7.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
