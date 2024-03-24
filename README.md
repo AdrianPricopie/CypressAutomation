@@ -35,6 +35,13 @@ products and services, including demos, user guides, technical support, and othe
 
 ![Structure](https://github.com/AdrianPricopie/CypressAutomation/blob/main/Screenshot%202024-03-24%20at%2019.40.12.png)
 
+- **cypress/**: This is the main directory of the Cypress project.
+- **cypress/fixtures/**: Static test data, such as JSON files, is stored here.
+- **cypress/integration/**: All spec files for tests are stored here. Inside this directory, each subdirectory corresponds to a specific testing module.
+- **cypress/support/**: Custom Cypress commands and other support files are defined here.
+- **cypress/integration/PageObjects/**: Classes representing page objects for different pages of the OrangeHRM website are stored here.
+- **cypress/integration/TestsOrangeHRM/**: All the tests are stored here.
+- **cypress/reports/**: This directory is where Cypress generates test reports.
 
 
 
