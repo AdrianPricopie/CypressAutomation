@@ -100,6 +100,50 @@ products and services, including demos, user guides, technical support, and othe
      5. Click on the "Logout" option.
    - Expected:
      - After clicking "Logout", the user is redirected to the login page.
+    
+### Test Scenarios for Admin/User Management Functionality:
+
+1. **Verify Successful Deletion of a User:**
+   - Description: Admin deletes a user from the system and verifies that the user no longer appears in the user list.
+   - Actions:
+     1. Navigate to the Admin/User Management page.
+     2. Delete a specific user from the system.
+   - Expected:
+     - The user is successfully deleted, and the user no longer appears in the user list.
+
+2. **Verify Addition of a New User:**
+   - Description: Admin adds a new user to the system.
+   - Actions:
+     1. Click on the "Add User" button.
+     2. Fill in the user details (user role, status, employee name, username, password, etc.).
+     3. Save the user.
+   - Expected:
+     - The new user is added successfully to the system, and the user appears in the user list.
+
+3. **Verify Error Message for Existing User:**
+   - Description: Admin attempts to create a user with a username that already exists in the system.
+   - Actions:
+     1. Click on the "Add User" button.
+     2. Fill in the user details with an existing username.
+   - Expected:
+     - An error message indicating that the username already exists is displayed.
+
+4. **Verify Search for Existing User by Username:**
+   - Description: Admin searches for an existing user by entering the username.
+   - Actions:
+     1. Enter the username of an existing user in the search field.
+     2. Click the search button.
+   - Expected:
+     - The corresponding user account is displayed in the "Record Found" section.
+
+5. **Verify Search for User by User Role:**
+   - Description: Admin searches for users based on their user role.
+   - Actions:
+     1. Select a specific user role from the dropdown.
+     2. Click the search button.
+   - Expected:
+     - The user accounts with the selected user role are displayed in the "Record Found" section.
+
 
 
 
