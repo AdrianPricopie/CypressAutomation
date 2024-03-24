@@ -148,13 +148,23 @@ products and services, including demos, user guides, technical support, and othe
 
 ## Getting Started  :pushpin:
 
-1. **Clone the Repository:**
+
+1.Prerequisites
+
+Make sure you have installed the following prerequisites on your development machine:
+
+| OS      | Node                                    |
+| ------- | --------------------------------------- |
+| Windows | `winget install --id OpenJS.NodeJS.LTS` |
+| macOS   | `brew install node@20`                  |
+
+2. **Clone the Repository:**
 
     ```bash
     git clone https://github.com/AdrianPricopie/CypressAutomation.git
     ```
 
-2. **Run all the tests with html report:**
+3. **Run all the tests with html report:**
 
     ```bash
     npm run tests
