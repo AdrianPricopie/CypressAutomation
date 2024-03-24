@@ -16,9 +16,10 @@ o
  
 This project aims to implement automated tests for the OrangeHRM opensource website using Cypress and POM(Page object oriented) framework. 
 The primary objectives include simulating user interactions and login in account ,add users,delete users,search users.
-Language:**JavaScript**
-Editor code:**VsCode**
-Library:Cypress,cypress-mochawesome-reporter;
+
+- Language:**JavaScript**
+- Editor code:**VsCode**
+- Library:Cypress,cypress-mochawesome-reporter;
 
 
 OrangeHRM is a Human Resources Management (HRM) system that provides software solutions for efficiently managing HR departments in businesses and organizations.
