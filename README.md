@@ -149,7 +149,7 @@ products and services, including demos, user guides, technical support, and othe
 ## Getting Started  :pushpin:
 
 
-1.Prerequisites
+1.**Prerequisites:**
 
 Make sure you have installed the following prerequisites on your development machine:
 
