@@ -170,6 +170,10 @@ Make sure you have installed the following prerequisites on your development mac
     npm run tests
     ```
 
+## Reports
+
+![](https://github.com/AdrianPricopie/CypressAutomation/blob/main/Screenshot%202024-03-24%20at%2022.45.34.png)
+
 
 
 
