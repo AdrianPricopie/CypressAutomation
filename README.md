@@ -33,7 +33,7 @@ products and services, including demos, user guides, technical support, and othe
 
 # Project Structure 
 
-![Structure](https://github.com/AdrianPricopie/CypressAutomation/blob/main/Screenshot%202024-03-24%20at%2019.40.12.png)
+![Structure](https://github.com/AdrianPricopie/CypressAutomation/blob/main/Screenshot%202024-03-24%20at%2023.36.16.png)
 
 - **cypress/**: This is the main directory of the Cypress project.
 - **cypress/fixtures/**: Static test data, such as JSON files, is stored here.
