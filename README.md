@@ -19,8 +19,9 @@ The primary objectives include simulating user interactions and login in account
 
 - Language:**JavaScript**
 - Editor code:**VsCode**
-- Library:**Cypress,cypress-mochawesome-reporter**;
-
+- Library:
+  - [![Cypress](https://img.shields.io/npm/v/cypress?color=33ff99&label=cypress&logo=cypress&logoColor=33ff99&style=for-the-badge)](https://www.cypress.io)
+  - cypress-mochawesome-reporter 3.8.2
 
 OrangeHRM is a Human Resources Management (HRM) system that provides software solutions for efficiently managing HR departments in businesses and organizations.
 OrangeHRM offers various functionalities, including employee data management, recruitment and selection, employee training, performance management, leave and absence management, report generation, as well as other HR-related aspects.
@@ -143,6 +144,22 @@ products and services, including demos, user guides, technical support, and othe
      2. Click the search button.
    - Expected:
      - The user accounts with the selected user role are displayed in the "Record Found" section.
+    
+
+## Getting Started  :pushpin:
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/AdrianPricopie/CypressAutomation.git
+    ```
+
+2. **Run all the tests with html report:**
+
+    ```bash
+    npm run tests
+    ```
+
 
 
 
