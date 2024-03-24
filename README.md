@@ -19,7 +19,7 @@ The primary objectives include simulating user interactions and login in account
 
 - Language:**JavaScript**
 - Editor code:**VsCode**
-- Library:Cypress,cypress-mochawesome-reporter;
+- Library:**Cypress,cypress-mochawesome-reporter**;
 
 
 OrangeHRM is a Human Resources Management (HRM) system that provides software solutions for efficiently managing HR departments in businesses and organizations.
