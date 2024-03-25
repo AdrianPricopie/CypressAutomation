@@ -152,6 +152,7 @@ Make sure you have installed the following prerequisites on your development mac
 | OS      | Node                                    |
 | ------- | --------------------------------------- |
 | Windows | `winget install --id OpenJS.NodeJS.LTS` |
+|         | ` npm i --save-dev cypress-mochawesome-reporter`        |
 | macOS   | `brew install node@20`    
 |         | ` npm i --save-dev cypress-mochawesome-reporter`        |
 
