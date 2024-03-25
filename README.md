@@ -205,7 +205,48 @@ it('Verify if I can see an error when I try to log in without enter password', f
      - The user is successfully deleted, and the user no longer appears in the user list.
     
   ```JavaScript
- 
+  it('Verify If i can  successfully deleted a user from the system and no longer appears in the user list',function(){
+        AdminPage.DeleteThirdAccountAndVerify();
+    })
+ ```
+
+ this  deletethirdAccountAndVerify fuction is in Admin_userManagementPage.js class AdminPage
+ ```JavaScript
+   DeleteThirdAccountAndVerify() {
+                // Iterăm prin fiecare rând din tabel
+                cy.get('.oxd-table-card').each(($el,index) => {
+                    if(index === 1){
+                    const deletedUserName = $el.text().trim();
+                    cy.log(deletedUserName)
+                    
+                    // Facem clic pe butonul de ștergere pentru acest utilizator
+                    cy.wrap($el).find('button[type="button"]').eq(0).click({ force: true });
+            
+                    // Așteptăm ca butonul de confirmare pentru ștergere să fie vizibil
+                    cy.get('.oxd-button--label-danger').should('be.visible');
+            
+                    // Facem clic pe butonul de confirmare pentru ștergere
+                    cy.get('.oxd-button--label-danger').click();
+            
+                    // Verificăm că numele utilizatorului a fost șters
+                    this.VerifyAccountAfterDelete(deletedUserName);
+                    }
+                });
+            }
+            VerifyAccountAfterDelete(name) {
+                let nameExists = false;
+                
+                // Verificăm dacă numele utilizatorului mai există în tabel
+                cy.get('.oxd-table-card').each(($el) => {
+                    const text = $el.text();
+                    if (text.includes(name)) {
+                        nameExists = true;
+                    }
+                }).then(() => {
+                    // Verificăm că numele utilizatorului nu mai există în tabel
+                    expect(nameExists).to.be.false;
+                });
+            }
     
  ```    
    
