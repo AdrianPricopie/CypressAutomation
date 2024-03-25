@@ -81,9 +81,6 @@ Cypress.Commands.add('LoginAccount', (username, password) => {
 
  ```
 
-
-Examples of tests :
-
 ### Test Scenarios for Login Functionality:
 
 1. **Login with Valid Credentials:**
