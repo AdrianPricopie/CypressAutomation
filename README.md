@@ -261,7 +261,21 @@ it('Verify if I can see an error when I try to log in without enter password', f
      - The new user is added successfully to the system, and the user appears in the user list.
 
  ```JavaScript
- 
+   it('Verify if I can add a new user ', function () {
+       AdminPage.ClickAddUser()
+       AdminPage.SelectUserRole(this.data.UserRole[0])
+       AdminPage.SelectStatus(this.data.Status[0])
+       AdminPage.SetEmployeName(this.data.EmployName)
+       AdminPage.SetUserName(this.data.Username)
+       AdminPage.SetPassword(this.data.Password)
+       AdminPage.ConfirmPassword(this.data.Password)
+       AdminPage.clickSaveButton()
+       AdminPage.VerifyAccount(this.data.EmployName)
+
+       //clean up , delete account
+       AdminPage.DeleteAccountForCleanUP(this.data.EmployName)
+    })
+    
     
  ```    
    
@@ -274,7 +288,18 @@ it('Verify if I can see an error when I try to log in without enter password', f
    - Expected:
      - An error message indicating that the username already exists is displayed.
  ```JavaScript
- 
+    it('Verify if when I try to create an account already existed ,an error will be displayed',function(){
+        AdminPage.ClickAddUser()
+        AdminPage.SelectUserRole(this.data.UserRole[0])
+        AdminPage.SelectStatus(this.data.Status[0])
+        AdminPage.SetEmployeName(this.data.EmployName)
+        AdminPage.SetUserName(this.data.UsernameExist)
+        AdminPage.SetPassword(this.data.Password)
+        AdminPage.ConfirmPassword(this.data.Password)
+        AdminPage.clickSaveButton()
+        AdminPage.VerifyAnExistingAccount()
+
+    })
     
  ```    
    
@@ -286,7 +311,11 @@ it('Verify if I can see an error when I try to log in without enter password', f
    - Expected:
      - The corresponding user account is displayed in the "Record Found" section.
  ```JavaScript
- 
+   it('Verify that when the username field is filled with an existing account and the search button is pressed, the corresponding account should be displayed in the "Record Found" section',function(){
+        AdminPage.UsernameInputSystemUser(this.data.UsernameExist)
+        AdminPage.ClickSearchButton()
+        AdminPage.VerifyAccount(this.data.UsernameExist)
+    })
     
  ```    
    
@@ -298,10 +327,15 @@ it('Verify if I can see an error when I try to log in without enter password', f
    - Expected:
      - The user accounts with the selected user role are displayed in the "Record Found" section.
 
-    ```JavaScript
+ ```JavaScript
  
+    it('Verify that when the user role is set  and the search button is pressed, the corresponding record should appear in the "Record Found" section.',function(){
+        AdminPage.SelectUserRole(this.data.UserRole[0])
+        AdminPage.ClickSearchButton()
+        AdminPage.VerifyAccountSystemUser(this.data.UserRole[0])
+    })
     
- ```    
+ ```   
     
 
 ## Getting Started  :pushpin:
