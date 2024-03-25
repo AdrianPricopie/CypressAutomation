@@ -67,6 +67,8 @@ Fixtures->TestDataLogin
 
  ```
 
+Examples of tests :
+
 ### Test Scenarios for Login Functionality:
 
 1. **Login with Valid Credentials:**
@@ -77,6 +79,15 @@ Fixtures->TestDataLogin
      3. Clicks the login button.
    - Expected:
      - User is redirected to the dashboard.
+    
+ ```JavaScript
+   it('Verify if I can log in with valid credentials and redirection to the dashboard', function () {
+        LoginPage.fillUsername(this.data.ValidUsername);
+        LoginPage.fillPassword(this.data.ValidPassword);
+        LoginPage.submitLogin();
+        cy.url().should('include', 'dashboard');
+    })
+ ```
 
 2. **Login with Invalid Credentials:**
    - Description: User enters invalid username and password and clicks the login button.
@@ -86,6 +97,16 @@ Fixtures->TestDataLogin
      3. Clicks the login button.
    - Expected:
      - An error message indicating invalid credentials is displayed.
+ ```JavaScript
+   it('Verify if I can see an error when I try to log in with invalid credentials', function () {
+        LoginPage.fillUsername(this.data.InvalidUsername);
+        LoginPage.fillPassword(this.data.InvalidPassword);
+        LoginPage.submitLogin();
+        LoginPage.getErrorMessage().should('have.text', 'Invalid credentials');
+    })
+    
+ ```    
+   
 
 3. **Login Without Entering Password:**
    - Description: User enters only the username and clicks the login button.
@@ -95,6 +116,16 @@ Fixtures->TestDataLogin
      3. Clicks the login button.
    - Expected:
      - An error message indicating password is required is displayed.
+ ```JavaScript
+it('Verify if I can see an error when I try to log in without enter password', function () {
+        LoginPage.fillUsername(this.data.ValidUsername);
+        LoginPage.submitLogin();
+        LoginPage.getRequiredErrorMessage().should('have.text', 'Required');
+    })
+    
+ ```
+
+
 
 4. **Login Without Entering Username:**
    - Description: User enters only the password and clicks the login button.
@@ -104,6 +135,16 @@ Fixtures->TestDataLogin
      3. Clicks the login button.
    - Expected:
      - An error message indicating username is required is displayed.
+ ```JavaScript
+  it('Verify if I can see an error when I try to log in without enter username', function () {
+        LoginPage.fillPassword(this.data.InvalidPassword);
+        LoginPage.submitLogin();
+        LoginPage.getRequiredErrorMessage().should('have.text', 'Required');
+    })
+
+    
+ ```    
+   
 
 5. **Login Without Completing Mandatory Fields:**
    - Description: User attempts to login without completing any of the mandatory fields (username and password).
@@ -112,6 +153,18 @@ Fixtures->TestDataLogin
      2. Clicks the login button.
    - Expected:
      - Error messages for both fields indicating they are required are displayed.
+    
+ ```JavaScript
+  it('Verify if I can see two error messages in username and password field when I try to log in  without completing any mandatory field', function () {
+        LoginPage.submitLogin();
+        LoginPage.getRequiredErrorMessage().should('have.length', 2).each(($el) => {
+            expect($el.text()).to.equal('Required');
+        })
+    })
+    
+ ```    
+   
+  
 6. **Verify Successful Logout:**
 
    - Description: After successfully logging in, the user logs out of the system and verifies redirection to the login page.
@@ -124,6 +177,23 @@ Fixtures->TestDataLogin
    - Expected:
      - After clicking "Logout", the user is redirected to the login page.
     
+  ```JavaScript
+   it('Verify if I can successfully log out', function () {
+        LoginPage.fillUsername(this.data.ValidUsername);
+        LoginPage.fillPassword(this.data.ValidPassword);
+        LoginPage.submitLogin();
+
+        cy.url().should('include', 'dashboard');
+
+        LoginPage.clickDropDown()
+
+        cy.contains('Logout').click();
+        cy.url().should('include', 'auth/login');
+    })
+    
+ ```    
+   
+    
 ### Test Scenarios for Admin/User Management Functionality:
 
 1. **Verify Successful Deletion of a User:**
@@ -133,6 +203,12 @@ Fixtures->TestDataLogin
      2. Delete a specific user from the system.
    - Expected:
      - The user is successfully deleted, and the user no longer appears in the user list.
+    
+  ```JavaScript
+ 
+    
+ ```    
+   
 
 2. **Verify Addition of a New User:**
    - Description: Admin adds a new user to the system.
@@ -143,6 +219,12 @@ Fixtures->TestDataLogin
    - Expected:
      - The new user is added successfully to the system, and the user appears in the user list.
 
+ ```JavaScript
+ 
+    
+ ```    
+   
+
 3. **Verify Error Message for Existing User:**
    - Description: Admin attempts to create a user with a username that already exists in the system.
    - Actions:
@@ -150,7 +232,11 @@ Fixtures->TestDataLogin
      2. Fill in the user details with an existing username.
    - Expected:
      - An error message indicating that the username already exists is displayed.
-
+ ```JavaScript
+ 
+    
+ ```    
+   
 4. **Verify Search for Existing User by Username:**
    - Description: Admin searches for an existing user by entering the username.
    - Actions:
@@ -158,7 +244,11 @@ Fixtures->TestDataLogin
      2. Click the search button.
    - Expected:
      - The corresponding user account is displayed in the "Record Found" section.
-
+ ```JavaScript
+ 
+    
+ ```    
+   
 5. **Verify Search for User by User Role:**
    - Description: Admin searches for users based on their user role.
    - Actions:
@@ -166,6 +256,11 @@ Fixtures->TestDataLogin
      2. Click the search button.
    - Expected:
      - The user accounts with the selected user role are displayed in the "Record Found" section.
+
+    ```JavaScript
+ 
+    
+ ```    
     
 
 ## Getting Started  :pushpin:
