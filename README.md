@@ -152,7 +152,9 @@ Make sure you have installed the following prerequisites on your development mac
 | OS      | Node                                    |
 | ------- | --------------------------------------- |
 | Windows | `winget install --id OpenJS.NodeJS.LTS` |
-| macOS   | `brew install node@20`                  |
+| macOS   | `brew install node@20`    
+|         | ` npm i --save-dev cypress-mochawesome-reporter`        |
+
 
 2. **Clone the Repository:**
 
@@ -160,7 +162,7 @@ Make sure you have installed the following prerequisites on your development mac
     git clone https://github.com/AdrianPricopie/CypressAutomation.git
     ```
 
-3. **Run all the tests with html report:**
+4. **Run all the tests with html report:**
 
     ```bash
     npm run tests
