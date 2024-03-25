@@ -40,6 +40,32 @@ products and services, including demos, user guides, technical support, and othe
 - **cypress/integration/TestsOrangeHRM/**: All the tests are stored here.
 - **cypress/reports/**: This directory is where Cypress generates test reports.
 
+Fixtures -> TestDataAdminModule
+```JavaScript
+{
+    "UserRole": ["Admin","ESS"],
+    "Status":    ["Enabled","Disabled"],
+    "EmployName": "Rahul Das",
+    "Username": "zrVfce3dswwdqssdqsRR",
+    "Password": "adsahi32#vdF",
+    "UsernameExist": "Admin"
+  }
+
+ ```
+Fixtures->TestDataLogin
+```JavaScript
+{
+  "name": "bob",
+  "gender": "Female",
+  "ProductName":["Blackberry","Nokia Edge"],
+  "ValidUsername":"Admin",
+  "ValidPassword":"admin123",
+  "InvalidUsername":"ADdsad",
+  "InvalidPassword":"Sdsad",
+  "SelectUser":["ESS","Admin"]
+}
+
+ ```
 
 ### Test Scenarios for Login Functionality:
 
