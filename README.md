@@ -67,6 +67,21 @@ Fixtures->TestDataLogin
 
  ```
 
+In the support directory, within the commands.js file, I've created a new command for authentication. Then, I will add it to the beforeEach hook in the tests within the admin module
+```JavaScript
+Cypress.Commands.add('LoginAccount', (username, password) => {
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'); // Asigură-te că aceasta este ruta către pagina de autentificare
+  
+    // Completează câmpurile de utilizator și parolă și trimite formularul
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button[type="submit"]').click();
+  });
+
+
+ ```
+
+
 Examples of tests :
 
 ### Test Scenarios for Login Functionality:
