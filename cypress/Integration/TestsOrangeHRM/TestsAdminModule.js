@@ -12,7 +12,7 @@ describe('Admin/User Management functionality', function () {
         })
     })
     it('Verify If i can  successfully deleted a user from the system and no longer appears in the user list',function(){
-        AdminPage.DeleteThirdAccountAndVerify();
+        AdminPage.DeleteSecondAccountAndVerify();
     })
 
     it('Verify if I can add a new user ', function () {
