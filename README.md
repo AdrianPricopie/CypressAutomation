@@ -213,7 +213,7 @@ it('Verify if I can see an error when I try to log in without enter password', f
    - Actions:
      1. Navigate to the Admin/User Management page.
      2. Delete the second user from the system.
-.
+
    - Expected:
      - The user is successfully deleted, and the user no longer appears in the user list.
     
