@@ -218,13 +218,13 @@ it('Verify if I can see an error when I try to log in without enter password', f
     
   ```JavaScript
   it('Verify If i can  successfully deleted a user from the system and no longer appears in the user list',function(){
-        AdminPage.DeleteThirdAccountAndVerify();
+        AdminPage.DeleteSecondAccountAndVerify();
     })
  ```
 
  this  deletethirdAccountAndVerify fuction is in Admin_userManagementPage.js class AdminPage
  ```JavaScript
-   DeleteThirdAccountAndVerify() {
+   DeleteSecondAccountAndVerify() {
                 // Iterăm prin fiecare rând din tabel
                 cy.get('.oxd-table-card').each(($el,index) => {
                     if(index === 1){
