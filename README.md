@@ -212,7 +212,8 @@ it('Verify if I can see an error when I try to log in without enter password', f
    - Description: Admin deletes a user from the system and verifies that the user no longer appears in the user list.
    - Actions:
      1. Navigate to the Admin/User Management page.
-     2. Delete a specific user from the system.
+     2. Delete the second user from the system.
+.
    - Expected:
      - The user is successfully deleted, and the user no longer appears in the user list.
     
