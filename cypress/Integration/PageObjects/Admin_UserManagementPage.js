@@ -78,7 +78,7 @@ class AdminPage {
                  expect(nameExists).to.be.true;
              });
             }
-            DeleteThirdAccountAndVerify() {
+            DeleteSecondAccountAndVerify() {
                 // Iterăm prin fiecare rând din tabel
                 cy.get('.oxd-table-card').each(($el,index) => {
                     if(index === 1){
